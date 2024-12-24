@@ -1,7 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');  // cross origin resource sharing
-const postRoutes = require('./routes/posts');
+const postRoutes = require('./routes/postRoutes');
+const authRoutes = require('./routes/authRoutes');
 
 require('dotenv').config();
 
@@ -19,6 +20,9 @@ app.get('/',(req,res) => {
 
 // Use the postRoutes for the /posts endpoint
 app.use('/posts', postRoutes);
+
+// use the authRoutes for the /auth endpoint
+app.use('/auth', authRoutes);
 
 //start server
 app.listen(port,() => {
