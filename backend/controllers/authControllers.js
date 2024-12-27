@@ -32,9 +32,9 @@ const loginUser = async (req,res) => {
               return res.status(401).json({ error: "Invalid email or password" });
             }
         });
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: "Internal Server Error. Please try again later" });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: "Internal Server Error. Please try again later", error: err});
     }
 };
 
@@ -64,13 +64,13 @@ const registerUser = async function (req, res) {
   
       if (!user) {
         // If anything fails during user creation
-        return res.status(500).json({error: "Failed to create the user. Please try again later.",});
+        return res.status(500).json({error: "Failed to create the user.Please try again later.",});
       }
   
       res.status(200).json(user);
-    } catch (error) {
-      console.log(error);
-      res.status(500).json("Internal Server Error. Please try again later.");
+    } catch (err) {
+      console.log(err);
+      res.status(500).json({ message: 'Internal server error.', error: err });
     }
   };
   
