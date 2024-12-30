@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getPosts, createPost, deletePost } from '../services/api';
+import { getPosts, createPost, deletePost } from '../services/posts';
 import PostItem from './PostItem';
 import './PostList.css';
 
@@ -118,6 +118,7 @@ const PostList = () => {
                     {/* Pagination */}
                     <div>
                         <button
+                            className='pageBtn'
                             onClick={() => handlePageChange(page - 1)}
                             disabled={page === 1}
                         >
@@ -125,6 +126,7 @@ const PostList = () => {
                         </button>
                         <span> Page {page} of {totalPages} </span>
                         <button
+                            className='pageBtn'
                             onClick={() => handlePageChange(page + 1)}
                             disabled={page === totalPages}
                         >

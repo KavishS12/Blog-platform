@@ -15,5 +15,58 @@ h1{
   color: antiquewhite;
   font-size: 2.5em;
   text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.subheading{
+  color: antiquewhite;
+  font-size: 1.5em;
+  text-align: center;
+  font-style:italic;
+}
+
+.toggleBtnsDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  justify-content: center;
+}
+
+.toggleBtn {
+  background-color: antiquewhite;
+  color:040410 ;
+  padding: 10px 30px;
+  padding: none;
+  font-weight: bold;
+  font-size: large;
+}
+
+.toggleBtn:disabled {
+  background-color: #444;
+  cursor: not-allowed;
+}
+
+.user{
+  color: rgb(196, 169, 214);
+  font-size: 25px;
+  font-weight: 900;
+  position: fixed;
+  left: 30px;
+  top: 0px;
+}
+
+.logoutBtn {
+  background-color: antiquewhite;
+  color:040410 ;
+  padding: none;
+  font-weight: bold;
+  font-size: large;
+  position: fixed;
+  right: 30px;
+  top: 20px;
+}
+
+.logoutBtn:hover , .toggleBtn:hover:not(:disabled) {
+  background-color: #979cde;
 }
 

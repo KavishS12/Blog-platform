@@ -84,8 +84,8 @@ button:disabled {
     cursor: not-allowed;
 }
 
-button:hover:not(:disabled) {
-    background-color: #01020f;
+.pageBtn:hover:not(:disabled) {
+    background-color: #979cde;
     color: #FFFFFF;
 }
 
